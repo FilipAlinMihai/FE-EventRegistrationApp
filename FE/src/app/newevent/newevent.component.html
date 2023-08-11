@@ -1,0 +1,15 @@
+<div id="rooms">
+<h1>Camere Eveniment</h1>
+<div class="aaa">
+    <form id="myForm">
+    <label >Coordonator </label>
+    <input #coordonator><br>
+    <label >Nume Camera </label>
+    <input #nameroom><br>
+    <label >Numar locuri </label>
+    <input type="number" #number><br>
+    <button (click)="finish(coordonator.value,nameroom.value,number.value)">Creare</button>
+    </form>
+</div>
+<button (click)="next()">Inainte</button>
+</div>

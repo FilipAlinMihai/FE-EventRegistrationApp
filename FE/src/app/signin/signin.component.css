@@ -1,0 +1,32 @@
+
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+  }
+
+
+  #sign{
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    background-color: #a1c63a;
+    color: black;
+    border-radius: 5%;
+    text-align: center;
+    line-height: 2.0;
+  }
+
+  button{
+    font-size: larger;
+    padding: 7px;
+    border-radius: 15%;
+    background-color: 	#006833;
+    margin: 10px;
+}

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: rgb(185, 185, 185);
+    min-height: 100%; /* height grows if content grows */
+}
+
+.aaa {
+    background-color: #a1c63a !important;
+    width: 100% !important;
+    text-align: center;
+    border-radius: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 2.0;
+    color: black;
+}

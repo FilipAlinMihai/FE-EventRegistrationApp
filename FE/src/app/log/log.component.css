@@ -1,0 +1,52 @@
+
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+  }
+
+#logdiv{
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    background-color: #a1c63a;
+    color: black;
+    border-radius: 5%;
+    text-align: center;
+}
+
+#page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#form{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input{
+    padding: 7px;
+    margin: 7px;
+    border-radius: 8%;
+}
+
+label{
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    font-size: larger;
+    padding: 7px;
+    border-radius: 15%;
+    background-color: 	#006833;
+
+}

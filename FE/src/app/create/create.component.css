@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+  }
+
+#create{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#form{
+    border-radius: 15%;
+    background-color: #a1c63a;
+    font-size: large;
+    text-align: center;
+    width: 40%;
+    color: black;
+    line-height: 2.0;
+}
+
+button{
+    background-color: 	#006833;
+    border-radius: 15%;
+    font-size: larger;
+}

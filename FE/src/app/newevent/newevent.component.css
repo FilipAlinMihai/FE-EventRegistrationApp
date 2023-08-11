@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    align-items: center;
+  }
+
+  .aaa {
+    background-color: #a1c63a !important;
+    width: 100% !important;
+    text-align: center;
+}
+
+
+#rooms{
+    width: 70%;
+    background-color: black;
+    height: 100%;
+    align-items: center;
+    color: white;
+    text-align: center;
+}

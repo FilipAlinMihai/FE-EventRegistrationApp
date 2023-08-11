@@ -1,0 +1,10 @@
+#main{
+    background-color: aqua;
+    width: 100%;
+    text-align: center;
+}
+
+button{
+    font-size: larger;
+    margin: 10px;
+}
