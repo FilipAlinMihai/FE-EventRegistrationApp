@@ -8,3 +8,9 @@ button{
     font-size: larger;
     margin: 10px;
 }
+
+.event{
+    background-color: black;
+    color: azure;
+    font-size: 16px;
+}

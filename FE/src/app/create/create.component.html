@@ -1,10 +1,10 @@
+<div id="page">
 <div id="create">
-    <form id="form">
         <h1>Creare</h1>
         <label >Nume Eveniment </label>
         <input #name><br>
         <label >Categorie </label>
-        <select name="event" id="event">
+        <select name="event" id="event" #type>
             <option value="muzical">Muzical</option>
             <option value="sportiv">Sportiv</option>
             <option value="cultural">Cultural</option>
@@ -13,7 +13,8 @@
           </select><br>
           <label >Numar Camere </label>
         <input type="number" #number><br>
-        <button (click)="creare(number.value)">Inainte</button><br>
+        <button (click)="creare(name.value,type.value,number.value)">Inainte</button><br>
         <button (click)="back()">Inapoi</button>
-    </form>
+
+</div>
 </div>

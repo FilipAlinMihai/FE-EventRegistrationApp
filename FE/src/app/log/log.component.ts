@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import { UserService } from '../services/User.service';
+import { LocalService } from '../services/local.service';
 
 @Component({
   selector: 'app-log',
@@ -9,7 +10,7 @@ import { UserService } from '../services/User.service';
 })
 export class LogComponent implements OnInit {
 
-  constructor( private router: Router,private userService:UserService) { }
+  constructor( private router: Router,private userService:UserService,private localStore:LocalService) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +27,8 @@ export class LogComponent implements OnInit {
           return;
         }
         console.log("answear was recieved");
+        this.localStore.saveData("userId", String(response.id));
+        this.localStore.saveData("email", response.email)
         this.router.navigate(['base']);
       }
     )
