@@ -16,6 +16,8 @@ export class CreateComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.localStore.saveData("eventroom", "0");
+    console.log("ENTER CREATE");
   }
 
   creare(na:string,t:string,n:string){
@@ -39,6 +41,8 @@ export class CreateComponent implements OnInit {
               return;
             }
             console.log("answear was recieved");
+            this.localStore.saveData("eventroom", "0")
+            this.localStore.saveData("eventId", String(response2.id));
             this.router.navigate(["new"],{ state: { dataKey:  n} });
           }
         )

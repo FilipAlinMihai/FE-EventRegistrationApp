@@ -12,8 +12,8 @@ export class EventService {
   constructor(private http: HttpClient) {
   }
 
-  public addEvent(name:string,type:string,rooms:number,id:number): Observable<Event>{
-    return this.http.post<Event>(this.apiServerUrl + '/event/add/'+id, {
+  public addEvent(name:string,type:string,rooms:number,id:number): Observable<Event2>{
+    return this.http.post<Event2>(this.apiServerUrl + '/event/add/'+id, {
       "name": name,
       "type": type,
       "rooms": rooms

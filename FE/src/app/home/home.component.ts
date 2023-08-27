@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
     const box = document.getElementById('myevents') as HTMLDivElement;
     var product = document.createElement('div');
     product.classList.add("event");
-    product.innerHTML=`<br><p >${name}</p><br><br><p >${rooms}</p><br><p >${type}</p>`;
+    product.innerHTML=`<p >Eveniment: ${name}</p><p >Camere: ${rooms}</p><p >Tip: ${type}</p>`;
     box.appendChild(product)
   }
 
