@@ -1,0 +1,16 @@
+button{
+    font-size: larger;
+    margin: 10px;
+}
+
+.request{
+    background-color: black;
+    color: azure;
+    font-size: 16px;
+    border-radius: 20%;
+    text-align: center;
+}
+
+#myrequests{
+    text-align: center;
+}

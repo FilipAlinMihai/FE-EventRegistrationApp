@@ -22,6 +22,17 @@ export class RoomService {
     }).pipe(catchError(this.handleaddRoomError));
   }
 
+  public roomsSeats(id:number): Observable<Number>{
+    return this.http.get<Number>(this.apiServerUrl + '/room/seats/'+id, {});
+  }
+
+  public roomsEmptySeats(id:number): Observable<Number>{
+    return this.http.get<Number>(this.apiServerUrl + '/room/emptyseats/'+id, {});
+  }
+  public takeSeat(id:number,num:number): Observable<Number>{
+    return this.http.post<Number>(this.apiServerUrl + '/room/takeSeat/'+id+'/'+num, {});
+  }
+
   handleaddRoomError(error: HttpErrorResponse) {
     window.alert("Could not add room!");
     window.location.reload();

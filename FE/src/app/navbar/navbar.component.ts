@@ -16,4 +16,24 @@ export class NavbarComponent implements OnInit {
   add(){
     this.router.navigate(["add"]);
   }
+
+  request()
+  {
+    this.router.navigate(["request"]);
+  }
+
+  requests()
+  {
+    this.router.navigate(["requests"]);
+  }
+
+  friends(){
+    this.router.navigate(["friends"]);
+  }
+
+  events(){
+    this.router.navigate(["events"]);
+  }
+
+
 }

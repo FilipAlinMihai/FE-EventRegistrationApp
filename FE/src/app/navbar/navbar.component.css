@@ -3,17 +3,20 @@
     margin: 5px;
 }
 
-#add{
+button{
     background-color: 	#006833;
     font-size: larger;
     margin-left: 30px;
-    position: absolute;
+    margin-bottom: 25px;
     top: 7%;
-    margin-top: -25px;
+    
 }
 
 #navbar{
     width: 100%;
     background-color: #a1c63a;
-
+    display: inline-block; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    color: #333; 
 }

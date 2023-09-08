@@ -38,6 +38,10 @@ export class EventService {
     }).pipe(catchError(this.handlecheckEventError));
   }
 
+  public get(id:number): Observable<Event2>{
+    return this.http.post<Event2>(this.apiServerUrl + '/event/get/'+id, {});
+  }
+
   handlecheckEventError(error: HttpErrorResponse) {
     window.alert("Could not verify event");
     //window.location.reload();

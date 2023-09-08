@@ -1,0 +1,27 @@
+<h1 id="title"></h1>
+<div id="page">
+
+    <div id="content">
+
+        <h1 id="rooms"></h1>
+
+        <h1 id="seats"></h1>
+
+        <h1 id="empty"></h1>
+
+    </div>
+
+    <button>Rooms statistics</button>
+
+    <div id="reservation">
+        <h1>Reservation</h1>
+        <label >Number of Seats </label>
+        <input type="number" #seats><br>
+
+        <label >Room ID</label>
+        <input type="number" #room><br>
+        <button (click)="reservation(seats.value,room.value)">Book</button>
+
+    </div>
+
+</div>

@@ -11,6 +11,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CreateComponent } from './create/create.component';
 import { NeweventComponent } from './newevent/newevent.component';
 import { SigninComponent } from './signin/signin.component';
+import { RequestComponent } from './request/request.component';
+import { RequestsComponent } from './requests/requests.component';
+import { FriendsComponent } from './friends/friends.component';
+import { EventsComponent } from './events/events.component';
+import { EventpageComponent } from './eventpage/eventpage.component';
 
 const routes: Routes = [
   {path: 'index', component: LogComponent},
@@ -18,7 +23,12 @@ const routes: Routes = [
   {path: '', redirectTo: '/index', pathMatch: 'full'},
   {path: 'add', component: CreateComponent},
   {path: 'new', component: NeweventComponent},
-  {path: 'signin', component: SigninComponent}
+  {path: 'signin', component: SigninComponent},
+  {path: 'request', component: RequestComponent},
+  {path: 'requests', component: RequestsComponent},
+  {path: 'friends', component: FriendsComponent},
+  {path: 'events', component: EventsComponent},
+  {path: 'event', component: EventpageComponent}
 ];
 
 
@@ -30,7 +40,12 @@ const routes: Routes = [
     NavbarComponent,
     CreateComponent,
     NeweventComponent,
-    SigninComponent
+    SigninComponent,
+    RequestComponent,
+    RequestsComponent,
+    FriendsComponent,
+    EventsComponent,
+    EventpageComponent
   ],
   imports: [
     BrowserModule,

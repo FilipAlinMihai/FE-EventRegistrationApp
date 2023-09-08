@@ -36,6 +36,11 @@ export class UserService {
     }).pipe(catchError(this.handlefindUserError));
   }
 
+  public getUser(id:number): Observable<User>{
+    console.log(id);
+    return this.http.post<User>(this.apiServerUrl + '/user/get/'+id, {});
+  }
+
   handleaddUserError(error: HttpErrorResponse) {
     window.alert("Could not add user");
     window.location.reload();

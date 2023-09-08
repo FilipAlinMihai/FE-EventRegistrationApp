@@ -6,6 +6,7 @@ body {
     margin: 0;
     background: rgb(185, 185, 185);
     min-height: 100%; /* height grows if content grows */
+    text-align: center;
 }
 
 .aaa {
@@ -25,4 +26,28 @@ body {
     font-size: 26px;
     border-radius: 20%;
     text-align: center;
+}
+
+.request{
+    background-color: black;
+    color: azure;
+    font-size: 26px;
+    border-radius: 20%;
+    text-align: center;
+}
+
+.friend{
+    background-color: black;
+    color: azure;
+    font-size: 26px;
+    border-radius: 20%;
+    text-align: center;
+}
+
+button{
+    font-size: larger;
+    padding: 7px;
+    border-radius: 15%;
+    background-color: 	#006833;
+    font-size: 20px;
 }
