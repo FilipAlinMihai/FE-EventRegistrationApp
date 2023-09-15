@@ -45,18 +45,21 @@ export class EventsComponent implements OnInit {
       (response: Event2[]) => {
 
         response.forEach((event: Event2) => {
-          this.addFriendEvent(event.id,event.name, event.rooms, event.type);
+          if(!event.privateE)
+          {
+            this.addFriendEvent(event.id,event.name, event.rooms, event.type,event.privateE);
+          }
         });
       }
     );
   }
 
 
-  addFriendEvent(id:number,name:string,rooms:number,type:string){
+  addFriendEvent(id:number,name:string,rooms:number,type:string,priv:boolean){
     const box = document.getElementById('friendEvents') as HTMLDivElement;
     var product = document.createElement('div');
     product.classList.add("event");
-    product.innerHTML=`<p >Eveniment: ${name}</p><p >Camere: ${rooms}</p><p >Tip: ${type}</p>`;
+    product.innerHTML=`<p >Eveniment: ${name}</p><p >Camere: ${rooms}</p><p >Tip: ${type}</p><p >Private: ${priv}</p>`;
     product.addEventListener('click', () => this.eventPage(id));
     box.appendChild(product)
   }

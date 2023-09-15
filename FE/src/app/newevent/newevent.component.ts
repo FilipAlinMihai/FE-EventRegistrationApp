@@ -87,7 +87,14 @@ export class NeweventComponent implements OnInit {
                   window.alert("Could not find account");
                   return;
               }
-              this.router.navigate(["base"]);
+              if(response.event.privateE==true)
+              {
+                this.router.navigate(["invitation"]);
+              }
+              else
+              {
+                this.router.navigate(["base"]);
+              }
             }
           );
 

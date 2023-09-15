@@ -35,5 +35,17 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(["events"]);
   }
 
+  reservations(){
+    this.router.navigate(["reservations"]);
+  }
+
+  profile(){
+    this.router.navigate(["profile"]);
+  }
+
+  privateEvents(){
+    this.router.navigate(["privatevents"]);
+  }
+
 
 }

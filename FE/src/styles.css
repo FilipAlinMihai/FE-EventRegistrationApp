@@ -28,6 +28,15 @@ body {
     text-align: center;
 }
 
+.room{
+    background-color: black;
+    color: azure;
+    font-size: 26px;
+    border-radius: 20%;
+    text-align: center;
+}
+
+
 .request{
     background-color: black;
     color: azure;

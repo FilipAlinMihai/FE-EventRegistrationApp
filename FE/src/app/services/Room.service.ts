@@ -33,6 +33,10 @@ export class RoomService {
     return this.http.post<Number>(this.apiServerUrl + '/room/takeSeat/'+id+'/'+num, {});
   }
 
+  public getRooms(id:number): Observable<Room[]>{
+    return this.http.post<Room[]>(this.apiServerUrl + '/room/getAllRooms/'+id, {});
+  }
+
   handleaddRoomError(error: HttpErrorResponse) {
     window.alert("Could not add room!");
     window.location.reload();

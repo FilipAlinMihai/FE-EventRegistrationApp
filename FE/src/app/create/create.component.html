@@ -13,7 +13,15 @@
           </select><br>
           <label >Numar Camere </label>
         <input type="number" #number><br>
-        <button (click)="creare(name.value,type.value,number.value)">Inainte</button><br>
+
+        <label >Private </label>
+        <select name="private" id="private" #private>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br>
+        <label for="dateInput">Select a date:</label>
+        <input type="date" id="dateInput" name="dateInput" #date><br>
+        <button (click)="creare(name.value,type.value,number.value,private.value,date.value)">Inainte</button><br>
         <button (click)="back()">Inapoi</button>
 
 </div>

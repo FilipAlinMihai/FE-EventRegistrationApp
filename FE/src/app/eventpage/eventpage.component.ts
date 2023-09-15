@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { EventService } from '../services/Event.service';
 import { Event2 } from '../entity/Event2';
 import { RoomService } from '../services/Room.service';
+import { BookingService } from '../services/Booking.service';
 
 @Component({
   selector: 'app-eventpage',
@@ -16,7 +17,7 @@ export class EventpageComponent implements OnInit {
   eventid:any;
 
   constructor(private router: Router,private localStore:LocalService,private eventService:EventService,
-    private roomService:RoomService) { }
+    private roomService:RoomService,private bookingService:BookingService) { }
 
   ngOnInit(): void {
 
@@ -76,21 +77,48 @@ export class EventpageComponent implements OnInit {
   }
 
   reservation(seats:string,room:string){
-    this.roomService.takeSeat(Number(room),Number(seats)).subscribe(
-      (response) => {
-        if (response == -1)
+
+    this.bookingService.find(Number(this.localStore.getData("userId")),Number(room)).subscribe(
+      (response3) => {
+        if (response3 != null)
         {
-          window.alert("Could not reserve seats!");
+          window.alert("You have seats for this event!");
           return;
         }
-        if (response == -2)
-        {
-          window.alert("Not enough seats in this room!");
-          return;
-        }
-        window.alert("OK!");
+
+        this.roomService.takeSeat(Number(room),Number(seats)).subscribe(
+          (response) => {
+            if (response == -1)
+            {
+              window.alert("Could not reserve seats!");
+              return;
+            }
+            if (response == -2)
+            {
+              window.alert("Not enough seats in this room!");
+              return;
+            }
+            this.bookingService.addBooking(Number(this.localStore.getData("userId")),Number(room),Number(seats)).subscribe(
+              (response2) => {
+                if (response2 == null)
+                {
+                  window.alert("Could not add booking!");
+                  return;
+                }
+    
+                window.alert("OK");
+              }
+            );
+          }
+        );
+
       }
     );
+
+  }
+
+  roomsStatistics(){
+    this.router.navigate(["rooms"]);
   }
 
 }

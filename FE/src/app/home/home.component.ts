@@ -31,18 +31,18 @@ export class HomeComponent implements OnInit {
       (response: Event2[]) => {
         console.log(response); // Log the response to see its structure
         response.forEach((event: Event2) => {
-          this.addEvent(event.name, event.rooms, event.type);
+          this.addEvent(event.name, event.rooms, event.type,event.privateE);
         });
       }
     );
   }
   
 
-  addEvent(name:string,rooms:number,type:string){
+  addEvent(name:string,rooms:number,type:string,priv:boolean){
     const box = document.getElementById('myevents') as HTMLDivElement;
     var product = document.createElement('div');
     product.classList.add("event");
-    product.innerHTML=`<p >Eveniment: ${name}</p><p >Camere: ${rooms}</p><p >Tip: ${type}</p>`;
+    product.innerHTML=`<p >Eveniment: ${name}</p><p >Camere: ${rooms}</p><p >Tip: ${type}</p><p >Private: ${priv}</p>`;
     box.appendChild(product)
   }
 

@@ -16,6 +16,11 @@ import { RequestsComponent } from './requests/requests.component';
 import { FriendsComponent } from './friends/friends.component';
 import { EventsComponent } from './events/events.component';
 import { EventpageComponent } from './eventpage/eventpage.component';
+import { RoomsStatComponent } from './rooms-stat/rooms-stat.component';
+import { BookingsComponent } from './bookings/bookings.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SendInvitComponent } from './send-invit/send-invit.component';
+import { PrivateeventsComponent } from './privateevents/privateevents.component';
 
 const routes: Routes = [
   {path: 'index', component: LogComponent},
@@ -28,7 +33,12 @@ const routes: Routes = [
   {path: 'requests', component: RequestsComponent},
   {path: 'friends', component: FriendsComponent},
   {path: 'events', component: EventsComponent},
-  {path: 'event', component: EventpageComponent}
+  {path: 'event', component: EventpageComponent},
+  {path: 'rooms', component: RoomsStatComponent},
+  {path: 'reservations', component: BookingsComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'invitation', component: SendInvitComponent},
+  {path: 'privatevents', component: PrivateeventsComponent}
 ];
 
 
@@ -45,7 +55,12 @@ const routes: Routes = [
     RequestsComponent,
     FriendsComponent,
     EventsComponent,
-    EventpageComponent
+    EventpageComponent,
+    RoomsStatComponent,
+    BookingsComponent,
+    ProfileComponent,
+    SendInvitComponent,
+    PrivateeventsComponent
   ],
   imports: [
     BrowserModule,
