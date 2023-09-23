@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import { UserService } from '../services/User.service';
 import { LocalService } from '../services/local.service';
+import { User } from '../entity/User';
 
 @Component({
   selector: 'app-log',
@@ -37,6 +38,24 @@ export class LogComponent implements OnInit {
 
   signin(){
     this.router.navigate(['signin']);
+  }
+
+  recover(email:string){
+    if(email=="")
+    {
+      window.alert("Introduce an email adres first!");
+      return;
+    }
+    this.userService.recoverPassword(email).subscribe(
+      (response: User) => {
+          if (response == null)
+          {
+            window.alert("Mail can't be send!");
+            return;
+          }
+          this.router.navigate(['reset']);
+      }
+    );
   }
 
 }

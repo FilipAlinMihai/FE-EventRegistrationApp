@@ -1,0 +1,21 @@
+<div id="page">
+
+    <h1>Reset your password</h1>
+
+    <div id="content">
+        <h1>Reset Passsword</h1>
+        <label >Email </label>
+        <input #email><br>
+        <label >Token </label>
+        <input #token><br>
+        <label>Passsword </label>
+        <input #password><br>
+        <label>New Passsword </label>
+        <input #newpassword><br>
+        <label>Confirm Passsword </label>
+        <input #confirmpassword><br>
+        <button (click)="reset(email.value,token.value,password.value,
+        newpassword.value,confirmpassword.value)">Reset</button>
+    </div>
+
+</div>

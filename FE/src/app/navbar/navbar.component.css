@@ -4,17 +4,17 @@
 }
 
 button{
-    background-color: 	#006833;
+    background-color: 	#fca708d1;
     font-size: larger;
     margin-left: 30px;
     margin-bottom: 25px;
     top: 7%;
-    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
 #navbar{
     width: 100%;
-    background-color: #a1c63a;
+    background-color: #ffb758;
     display: inline-block; 
     padding: 10px 20px; 
     text-decoration: none; 

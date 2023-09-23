@@ -21,6 +21,7 @@ import { BookingsComponent } from './bookings/bookings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SendInvitComponent } from './send-invit/send-invit.component';
 import { PrivateeventsComponent } from './privateevents/privateevents.component';
+import { ResetComponent } from './reset/reset.component';
 
 const routes: Routes = [
   {path: 'index', component: LogComponent},
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path: 'reservations', component: BookingsComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'invitation', component: SendInvitComponent},
-  {path: 'privatevents', component: PrivateeventsComponent}
+  {path: 'privatevents', component: PrivateeventsComponent},
+  {path: 'reset', component: ResetComponent}
 ];
 
 
@@ -60,7 +62,8 @@ const routes: Routes = [
     BookingsComponent,
     ProfileComponent,
     SendInvitComponent,
-    PrivateeventsComponent
+    PrivateeventsComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

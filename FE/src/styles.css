@@ -4,7 +4,7 @@ html {
 }
 body {
     margin: 0;
-    background: rgb(185, 185, 185);
+    background: rgb(114, 114, 114);
     min-height: 100%; /* height grows if content grows */
     text-align: center;
 }
@@ -21,11 +21,15 @@ body {
 }
 
 .event{
-    background-color: black;
-    color: azure;
+    background-color: white;
     font-size: 26px;
     border-radius: 20%;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    width: 40%;
 }
 
 .room{
@@ -57,6 +61,12 @@ button{
     font-size: larger;
     padding: 7px;
     border-radius: 15%;
-    background-color: 	#006833;
+    background-color: 	#fca708d1;
     font-size: 20px;
+}
+
+input{
+    padding: 7px;
+    margin: 7px;
+    border-radius: 8%;
 }

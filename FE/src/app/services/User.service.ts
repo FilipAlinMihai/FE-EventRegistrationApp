@@ -41,8 +41,26 @@ export class UserService {
     return this.http.post<User>(this.apiServerUrl + '/user/get/'+id, {});
   }
 
+  public recoverPassword(email: string) : Observable<User> {
+    return this.http.post<User>(this.apiServerUrl + '/user/resetPassword/' + email, 
+    {}).pipe(catchError(this.handleRecoverError));
+  }
+
+  public updatePassword(token: string, password: string): Observable<User> {
+    return this.http.post<User>(this.apiServerUrl + '/user/savePassword/' + token, {
+      "password": password
+    });
+  }
+  
+
   handleaddUserError(error: HttpErrorResponse) {
     window.alert("Could not add user");
+    window.location.reload();
+    return throwError(error);
+  }
+
+  handleRecoverError(error: HttpErrorResponse) {
+    window.alert("Could not send mail!");
     window.location.reload();
     return throwError(error);
   }

@@ -13,10 +13,12 @@
     width: 40%;
     align-items: center;
     justify-content: center;
-    background-color: #a1c63a;
+    background-color: #ffffff;
     color: black;
     border-radius: 5%;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 #page{
@@ -24,6 +26,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #form{
@@ -36,17 +39,26 @@ input{
     padding: 7px;
     margin: 7px;
     border-radius: 8%;
+    border-top: #ffffff;
+    border-left: #ffffff;
+    border-right: #ffffff;
 }
 
 label{
     font-size: large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 button{
     font-size: larger;
     padding: 7px;
     border-radius: 15%;
-    background-color: 	#006833;
+    background-color: 		#FFA500;
+    margin: 7px;
+    font-family: 'Courier New', Courier, monospace;
+}
 
+#imgaut{
+    height: 10%;
+    width: 10%;
 }

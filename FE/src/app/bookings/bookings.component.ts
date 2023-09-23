@@ -46,10 +46,33 @@ export class BookingsComponent implements OnInit {
           return;
         }
 
+        const dateStr = response.dateE; 
+        const date1 = new Date(dateStr);
+        const date2 = new Date();
+        console.log(date1.getTime());
+
+
+        const timeDifferenceInMilliseconds = date2.getTime() - date1.getTime();
+
+
+        const millisecondsInDay = 24 * 60 * 60 * 1000; // 24 hours * 60 minutes * 60 seconds * 1000 milliseconds
+        const millisecondsInHour = 60 * 60 * 1000; // 60 minutes * 60 seconds * 1000 milliseconds
+        const millisecondsInMinute = 60 * 1000; // 60 seconds * 1000 milliseconds
+        
+        const absoluteDifferenceInMilliseconds = Math.abs(timeDifferenceInMilliseconds);
+        const differenceInDays = Math.floor(absoluteDifferenceInMilliseconds / millisecondsInDay);
+        const remainingMilliseconds = absoluteDifferenceInMilliseconds % millisecondsInDay;
+        
+        const differenceInHours = Math.floor(remainingMilliseconds / millisecondsInHour);
+        const remainingMilliseconds2 = remainingMilliseconds % millisecondsInHour;
+        
+        const differenceInMinutes = Math.floor(remainingMilliseconds2 / millisecondsInMinute);
+
         const box = document.getElementById('bookings') as HTMLDivElement;
         var product = document.createElement('div');
         product.classList.add("request");
-        product.innerHTML=`<p >Event: ${response.name}</p><p >Room ID: ${room}</p><p >Seats: ${seats}</p>`;
+        product.innerHTML=`<p >Event: ${response.name}</p><p >Room ID: ${room}</p><p >Seats: ${seats}</p>
+        <p >Remaining Days: ${differenceInDays}; Hours: ${differenceInHours}; Minutes: ${differenceInMinutes+1}</p>`;
         box.appendChild(product)
 
       });

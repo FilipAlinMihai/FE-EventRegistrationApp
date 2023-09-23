@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../entity/User';
 import { UserService } from '../services/User.service';
 import { LocalService } from '../services/local.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +11,7 @@ import { LocalService } from '../services/local.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private userService:UserService,private localStore:LocalService) { }
+  constructor(private router: Router,private userService:UserService,private localStore:LocalService) { }
 
   ngOnInit(): void {
 
@@ -44,7 +45,15 @@ export class ProfileComponent implements OnInit {
   }
 
   updatePassword(){
-
+    this.userService.recoverPassword(String(this.localStore.getData("email"))).subscribe(
+      (response: User) => {
+          if (response == null)
+          {
+            return;
+          }
+          this.router.navigate(['reset']);
+      }
+    );
   }
 
   updateEmail()

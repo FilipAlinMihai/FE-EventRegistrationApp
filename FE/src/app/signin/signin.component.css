@@ -16,17 +16,31 @@
     width: 40%;
     align-items: center;
     justify-content: center;
-    background-color: #a1c63a;
+    background-color: #ffffff;
     color: black;
     border-radius: 5%;
     text-align: center;
     line-height: 2.0;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   button{
     font-size: larger;
     padding: 7px;
     border-radius: 15%;
-    background-color: 	#006833;
+    background-color: 	#FFA500;
     margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input{
+  border-top: #ffffff;
+    border-left: #ffffff;
+    border-right: #ffffff;
+}
+
+#imgaut{
+  height: 15%;
+  width: 10%;
+  margin-top: 5px;
 }
