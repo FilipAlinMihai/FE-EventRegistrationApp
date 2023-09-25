@@ -16,6 +16,12 @@ export class CreateComponent implements OnInit {
 
 
   ngOnInit(): void {
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
+
     this.localStore.saveData("eventroom", "0");
     console.log("ENTER CREATE");
   }

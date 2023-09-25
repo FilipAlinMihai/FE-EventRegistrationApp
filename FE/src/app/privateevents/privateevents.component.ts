@@ -14,6 +14,11 @@ export class PrivateeventsComponent implements OnInit {
   constructor(private router: Router,private localStore:LocalService,private inviteService:InvitationService) { }
 
   ngOnInit(): void {
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
     this.getAllInvits();
   }
 

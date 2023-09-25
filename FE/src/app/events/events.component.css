@@ -1,4 +1,8 @@
 #friendEvents{
 text-align: center;
 width: 100%;
+align-items: center;
+display: flex;
+flex-direction: column;
+font-family: 'Courier New', Courier, monospace;
 }

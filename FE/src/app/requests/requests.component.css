@@ -1,11 +1,22 @@
+
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+  }
+
 button{
     font-size: larger;
     margin: 10px;
 }
 
 .request{
-    background-color: black;
-    color: azure;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 16px;
     border-radius: 20%;
     text-align: center;
@@ -13,4 +24,9 @@ button{
 
 #myrequests{
     text-align: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
 }

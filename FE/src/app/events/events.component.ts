@@ -17,7 +17,12 @@ export class EventsComponent implements OnInit {
   constructor(private router: Router,private friendService:FriendService,private localStore:LocalService,private eventService:EventService) { }
 
   ngOnInit(): void {
-
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
+    
     this.friendsEvents();
   }
 

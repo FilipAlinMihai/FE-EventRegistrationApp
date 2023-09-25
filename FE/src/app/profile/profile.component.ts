@@ -15,6 +15,11 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
 
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
 
     this.userService.getUser(Number(this.localStore.getData("userId"))).subscribe(
 
@@ -41,7 +46,15 @@ export class ProfileComponent implements OnInit {
       }
 
     );
+    var userName = this.localStore.getData("userName") || "NAME"
+    if (userName == "null")
+      userName = "NAME"
 
+    var intials = userName.charAt(0);
+    var intials = intials.toUpperCase();
+  
+    var userProfileImage = document.getElementById("profileImage") as HTMLImageElement
+    userProfileImage.src ="../assets/PozeLitereProfil/"+intials+".png";
   }
 
   updatePassword(){

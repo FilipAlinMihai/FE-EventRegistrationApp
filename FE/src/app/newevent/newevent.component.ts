@@ -23,6 +23,11 @@ export class NeweventComponent implements OnInit {
   constructor(private localStore:LocalService,private router: Router,private roomService:RoomService) { }
 
   ngOnInit(): void {
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
 
      this.data = history.state.dataKey;
   }
@@ -53,7 +58,7 @@ export class NeweventComponent implements OnInit {
     }
     else
     {
-      window.alert("All the rooms have been created.");
+      window.alert("All the rooms have been created."+this.val+" "+Number(this.data));
     }
     }
     else{

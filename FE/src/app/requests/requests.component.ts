@@ -19,6 +19,12 @@ export class RequestsComponent implements OnInit {
     private userService:UserService, private friendService:FriendService) { }
 
   ngOnInit(): void {
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
+    
     this.getAllMyRequests();
   }
 

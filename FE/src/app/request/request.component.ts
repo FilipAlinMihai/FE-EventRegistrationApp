@@ -17,6 +17,11 @@ export class RequestComponent implements OnInit {
     private localStore:LocalService,private friendService:FriendService) { }
 
   ngOnInit(): void {
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.route.navigate(['index']);
+      return;
+    }
   }
 
   sendRequest (email:string){

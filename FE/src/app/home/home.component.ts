@@ -17,7 +17,11 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router,private eventService:EventService,public localStore:LocalService) { }
 
   ngOnInit(): void {
-
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
     this.getAllMyEvents();
   }
 

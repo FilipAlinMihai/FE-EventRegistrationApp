@@ -10,7 +10,7 @@ body {
 }
 
 .aaa {
-    background-color: #a1c63a !important;
+    background-color: hsl(0, 0%, 100%) !important;
     width: 100% !important;
     text-align: center;
     border-radius: 10%;
@@ -33,28 +33,40 @@ body {
 }
 
 .room{
-    background-color: black;
-    color: azure;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 26px;
     border-radius: 20%;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
+    margin-bottom: 5px;
 }
 
 
 .request{
-    background-color: black;
-    color: azure;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 26px;
     border-radius: 20%;
     text-align: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 5px;
 }
 
 .friend{
-    background-color: black;
-    color: azure;
+    background-color: white;
     font-size: 26px;
     border-radius: 20%;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    width: 40%;
 }
 
 button{
@@ -63,10 +75,73 @@ button{
     border-radius: 15%;
     background-color: 	#fca708d1;
     font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 input{
     padding: 7px;
     margin: 7px;
     border-radius: 8%;
+    border-top: #ffffff;
+    border-left: #ffffff;
+    border-right: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label{
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .event{
+        background-color: white;
+        font-size: 26px;
+        border-radius: 20%;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 5px;
+        width: 85%;
+    }
+
+    .room{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-size: 26px;
+        border-radius: 20%;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        width: 85%;
+        margin-bottom: 5px;
+    }
+
+    .request{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-size: 26px;
+        border-radius: 20%;
+        text-align: center;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        width: 85%;
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 5px;
+    }
+    
+    .friend{
+        background-color: white;
+        font-size: 26px;
+        border-radius: 20%;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 5px;
+        width: 85%;
+    }
+    
 }

@@ -16,6 +16,12 @@ export class RoomsStatComponent implements OnInit {
 
   ngOnInit(): void {
 
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
+
     var title = document.getElementById("title") as HTMLImageElement;
           if(title)
           {

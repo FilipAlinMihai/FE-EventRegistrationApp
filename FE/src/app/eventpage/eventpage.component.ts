@@ -21,6 +21,12 @@ export class EventpageComponent implements OnInit {
 
   ngOnInit(): void {
 
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
+
     if (this.localStore.getData("eventID") == "null" || this.localStore.getData("eventID") == null)
       {
         this.router.navigate(['base']);

@@ -23,3 +23,11 @@ button{
     display: flex;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 768px) {
+    #main{
+        background-color: #ffb758;
+        width: 100%;
+        text-align: center;
+    }
+}

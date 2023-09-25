@@ -62,3 +62,33 @@ button{
     height: 10%;
     width: 10%;
 }
+
+@media only screen and (max-width: 1200px) {
+    #logdiv{
+        width: 70%;
+        height: 80%;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        color: black;
+        border-radius: 5%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #logdiv{
+        width: 90%;
+        height: 90%;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        color: black;
+        border-radius: 5%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+}

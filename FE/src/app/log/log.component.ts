@@ -30,6 +30,7 @@ export class LogComponent implements OnInit {
         console.log("answear was recieved");
         this.localStore.saveData("userId", String(response.id));
         this.localStore.saveData("email", response.email)
+        this.localStore.saveData("userName",response.name);
         this.router.navigate(['base']);
       }
     )

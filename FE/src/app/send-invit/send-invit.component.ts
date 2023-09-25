@@ -17,6 +17,11 @@ export class SendInvitComponent implements OnInit {
     private router: Router,private userService:UserService) { }
 
   ngOnInit(): void {
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
   }
 
   invite(friends:string)

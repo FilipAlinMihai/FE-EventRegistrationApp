@@ -3,6 +3,7 @@ import { LocalService } from '../services/local.service';
 import { BookingService } from '../services/Booking.service';
 import { Booking } from '../entity/Booking';
 import { EventService } from '../services/Event.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookings',
@@ -12,9 +13,14 @@ import { EventService } from '../services/Event.service';
 export class BookingsComponent implements OnInit {
 
   constructor(private localStorage:LocalService,private bookingService:BookingService,
-    private eventService:EventService) { }
+    private eventService:EventService,private router:Router) { }
 
   ngOnInit(): void {
+    if (this.localStorage.getData("email") == "null" || this.localStorage.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
 
     this.getAllBookings();
 

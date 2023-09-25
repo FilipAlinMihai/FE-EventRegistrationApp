@@ -3,6 +3,7 @@ import { FriendService } from '../services/Friend.service';
 import { LocalService } from '../services/local.service';
 import { Friend } from '../entity/Friend';
 import { UserService } from '../services/User.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-friends',
@@ -12,9 +13,16 @@ import { UserService } from '../services/User.service';
 export class FriendsComponent implements OnInit {
 
   id:any;
-  constructor(private friendService:FriendService,private localStore:LocalService,private userService:UserService) { }
+  constructor(private router:Router,private friendService:FriendService,
+    private localStore:LocalService,private userService:UserService) { }
 
   ngOnInit(): void {
+    if (this.localStore.getData("email") == "null" || this.localStore.getData("email") == null)
+    {
+      this.router.navigate(['index']);
+      return;
+    }
+
     this.getAllMyFriends();
   }
 
