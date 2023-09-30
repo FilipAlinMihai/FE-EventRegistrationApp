@@ -26,7 +26,7 @@ export class CreateComponent implements OnInit {
     console.log("ENTER CREATE");
   }
 
-  creare(na:string,t:string,n:string,prv:string,dat:string){
+  creare(na:string,t:string,n:string,prv:string,dat:string,fee:string){
 
     this.n1=Number(n);
     this.id=Number(this.localStore.getData("userId"));
@@ -38,7 +38,7 @@ export class CreateComponent implements OnInit {
           window.alert("You have an event with this name.");
           return;
         }
-        this.eventService.addEvent(na,t,this.n1,this.id,prv,dat).subscribe(
+        this.eventService.addEvent(na,t,this.n1,this.id,prv,dat,Number(fee)).subscribe(
           (response2) => {
             if (response2 == null)
             {

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class BookingsComponent implements OnInit {
 
+
   constructor(private localStorage:LocalService,private bookingService:BookingService,
     private eventService:EventService,private router:Router) { }
 
@@ -84,4 +85,6 @@ export class BookingsComponent implements OnInit {
       });
 
   }
+
+
 }

@@ -20,9 +20,11 @@
             <option value="true">Yes</option>
             <option value="false">No</option>
         </select><br>
+        <label >Fee </label>
+        <input type="number" #fee><br>
         <label for="dateInput">Select a date:</label>
         <input type="datetime-local" id="dateInput" name="dateInput" #date><br>
-        <button (click)="creare(name.value,type.value,number.value,private.value,date.value)">Inainte</button><br>
+        <button (click)="creare(name.value,type.value,number.value,private.value,date.value,fee.value)">Inainte</button><br>
         <button (click)="back()">Inapoi</button>
 
 </div>

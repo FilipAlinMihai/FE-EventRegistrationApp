@@ -12,13 +12,14 @@ export class EventService {
   constructor(private http: HttpClient) {
   }
 
-  public addEvent(name:string,type:string,rooms:number,id:number,prv:string,dat:string): Observable<Event2>{
+  public addEvent(name:string,type:string,rooms:number,id:number,prv:string,dat:string,fee:number): Observable<Event2>{
     return this.http.post<Event2>(this.apiServerUrl + '/event/add/'+id, {
       "name": name,
       "type": type,
       "rooms": rooms,
       "privateE":prv,
-      "dateE":dat
+      "dateE":dat,
+      "fee":fee
     }).pipe(catchError(this.handleaddEventError));
   }
 

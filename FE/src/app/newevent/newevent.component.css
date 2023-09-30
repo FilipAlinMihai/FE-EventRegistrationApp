@@ -29,3 +29,14 @@
   font-size: xx-large;
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  #rooms{
+    width: 90%;
+    background-color: black;
+    height: 100%;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+}

@@ -39,4 +39,11 @@
         width: 85%;
         height: 60%;
     }
+
+    #profileImage{
+        width: 35%;
+        height: 35%;
+        margin-top: 10px;
+        border-radius: 50%;
+    }
 }

@@ -59,6 +59,11 @@ button{
         color: black;
         line-height: 2.0;
     }
+
+    #imgaut{
+        height: 15%;
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -67,8 +72,8 @@ button{
         background-color: #ffffff;
         font-size: large;
         text-align: center;
-        width: 70%;
-        height: 70%;
+        width: 80%;
+        height: 80%;
         color: black;
         line-height: 2.0;
     }
