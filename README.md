@@ -9,7 +9,7 @@ Utilizatorul poate vedea  totalul de locuri si numarul de rezervari pentru un ev
 Pentru fiecare persoana este creata o lista cu evenimentele la care doreste sa participe. 
     Tot pe aceasta pagina sunt afisate si ountdown-uri pana la momentul inceperii evenimentului.
 
-Se utilizeaza Angular / TypeScript / HTMl / CSS
+## Se utilizeaza Angular / TypeScript / HTMl / CSS
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -23,4 +23,4 @@ Users can view the total number of available seats and the number of reservation
 A list of events that they wish to participate in is created for each individual.
 Countdown timers until the event starts are also displayed on this page.
 
-Angular / TypeScript / HTMl / CSS are used for implementation.
+## Angular / TypeScript / HTMl / CSS are used for implementation.
